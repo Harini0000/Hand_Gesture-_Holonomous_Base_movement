@@ -163,8 +163,7 @@ to dynamically locate package resources.
 
 ##  Demo Video
 
-https://github.com/harini0000/Hand_Gesture-_Holonomous_Base_movement/assets/demo.gif
-
+![Demo_video](assets/demo.gif)
 ---
 
 ##  Published ROS 2 Topics
