@@ -3,6 +3,20 @@
 An end-to-end ROS 2 and Gazebo robotics project that enables real-time, touchless teleoperation of an omnidirectional (holonomic) mobile robot using a custom-trained vision model. By analyzing live webcam feeds, the system maps hand positions and gestures directly to robot velocity commands.
 
 ---
+## Model Training
+
+| Detail | Value |
+| --- | --- |
+| Model | YOLOv11n (Ultralytics) |
+| Classes | `fist`, `open_hand` |
+| Dataset | 155 self-collected images (laptop webcam) |
+| Split | 60% train / 20% val / 20% test |
+| Epochs | 72 |
+| Precision | 95.8% |
+| Recall | 96.4% |
+| mAP50 | 97.3% |
+| mAP50-95 | 87.8% |
+
 
 ##  Key Features
   Tailored object detection model trained to classify and track hand states:
@@ -190,6 +204,14 @@ to dynamically locate package resources.
 
 ---
 
+## Limitations
+
+- Tested in simulation only (Gazebo).
+- Small dataset (155 images) captured from a single laptop camera, so performance may drop with different cameras, lighting, or backgrounds.
+- Supports only two gestures (`fist`, `open_hand`) and one hand at a time.
+
+---
+
 ##  Future Improvements
 
 - Multi-hand gesture support
@@ -198,7 +220,7 @@ to dynamically locate package resources.
 
 ---
 
-## Author
+## Author Note
 
 Developed as a robotics and computer vision integration project combining:
 - Real-time AI inference
@@ -206,4 +228,9 @@ Developed as a robotics and computer vision integration project combining:
 - ROS 2 middleware
 - Autonomous systems simulation
 
+## Author:
+
+**Harini Sathyanarayanan**
+Robotics Engineer | ROS 2 · Computer Vision · Mobile Robotics
+🔗 [LinkedIn](https://www.linkedin.com/in/harini-sathyanarayanan-a01986200/)
 ---
